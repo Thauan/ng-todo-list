@@ -1,0 +1,19 @@
+<nav class="navbar navbar-light bg-light">
+  <a class="navbar-brand" href="#">TO DO LIST</a> 
+  <button class="btn btn-primary" (click)="addTask()">Adicionar Tarefa</button>
+</nav>
+
+<div class="card" style="width: 18rem;" *ngFor="let task of taskList; let i = index">
+  <div class="card-body">
+    <h5 class="card-title">Tarefa: {{i + 1}}</h5>
+    <h6 class="card-subtitle mb-2 text-muted">Titulo:</h6>
+    <div class="form-group">
+      <input class="form-control" [(ngModel)]="task.title" type="text">
+    </div>
+    <h6 class="card-subtitle mb-2 text-muted">Descrição:</h6>
+    <div class="form-group">
+      <textarea class="form-control" [(ngModel)]="task.title" rows="3"></textarea>
+    </div>
+    <a href="#" class="card-link" (click)='removeTask(i)'>excluir</a>
+  </div>
+</div>

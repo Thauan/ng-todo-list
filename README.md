@@ -1,4 +1,4 @@
-<img src="https://github.com/Thauan/ng-todo-list/blob/main/src/assets/print.png" width="100%"/>
+<img src="https://imgur.com/a/zL3fZnC" width="100%"/>
 
 # Simple to do list in Angular
 

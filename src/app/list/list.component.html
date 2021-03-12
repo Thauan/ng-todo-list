@@ -1,19 +1,52 @@
-<nav class="navbar navbar-light bg-light">
-  <a class="navbar-brand" href="#">TO DO LIST</a> 
-  <button class="btn btn-primary" (click)="addTask()">Adicionar Tarefa</button>
-</nav>
+  <div class="container-fluid">
+    <app-header></app-header>
+    <div class="card-container">
+      <div class="card" style="width: 22rem;" >
+        <div class="p-4 full justify-center">
+            <div class="row justify-center full">
+              <div class="col-5">
+                <h5>Titulo</h5>
+                <input class="form-control input-grey" [(ngModel)]="task.titulo" type="text">
+              </div>
+              <div class="col-5">
+                <h5>Descricao</h5>
+              <input class="form-control input-grey" [(ngModel)]="task.descricao" type="text">
+              </div>
+              <div class="col-2 center-checkbox">
+                <h5>Status</h5>
+                <input type="checkbox" [(ngModel)]="task.done" class="todo-checkbox">
+              </div>
+            </div>
+          </div>
+          <div class="col-12 ml-5">
+            <button class="btn btn-primary btn-lg ml-2" (click)="addTask()">Adicionar</button>
+            <button class="btn btn-danger btn-lg ml-2" (click)="cleanForm()">Limpar</button>
+          </div>
+        <div class="card-body full mt-5">
+          <div class="container-fluid justify-center pb-2" *ngFor="let task of tasks; let index = index;">
+            <div class="col-12 row pb-3">
+              <div class="col-1">
+                <input type="checkbox" [(ngModel)]="task.done" class="todo-checkbox" [checked]="task.done" (change)="task.done = !task.done" (click)="doneTask(task)">
+              </div>
+              <div class="col-6" (click)="onEdit(index)" *ngIf="EditableIndex  !== index">
+                <h3 [ngClass]="{'underline-task': task.done == true}">{{ task.titulo }}</h3>
+                <p [ngClass]="{'underline-task': task.done == true}">{{ task.descricao }}</p>
+              </div>
+              <!-- {{ index }} -->
+              <div class="col-6" *ngIf="isEditEnable && EditableIndex == index">
+                <textarea class="form-control" [(ngModel)]="task.titulo" type="text"></textarea>
 
-<div class="card" style="width: 18rem;" *ngFor="let task of taskList; let i = index">
-  <div class="card-body">
-    <h5 class="card-title">Tarefa: {{i + 1}}</h5>
-    <h6 class="card-subtitle mb-2 text-muted">Titulo:</h6>
-    <div class="form-group">
-      <input class="form-control" [(ngModel)]="task.title" type="text">
+                <input class="form-control" [(ngModel)]="task.descricao" type="text">
+              </div>
+              <div class="col-5">
+                <button class="btn btn-primary btn-md ml-3" *ngIf="EditableIndex  !== index" (click)="onEdit(index)">Editar</button>
+                <button class="btn btn-success btn-md ml-3" *ngIf="isEditEnable && EditableIndex == index" (click)="onUpdate(task)">Atualizar</button>
+                <button class="btn btn-danger btn-md ml-3" *ngIf="EditableIndex  !== index" (click)="removeTask(task)">Remover</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <span class="pb-4 footer-copyright">Desenvolvido por Thauan Almeida</span>
+      </div>
     </div>
-    <h6 class="card-subtitle mb-2 text-muted">Descrição:</h6>
-    <div class="form-group">
-      <textarea class="form-control" [(ngModel)]="task.title" rows="3"></textarea>
-    </div>
-    <a href="#" class="card-link" (click)='removeTask(i)'>excluir</a>
   </div>
-</div>

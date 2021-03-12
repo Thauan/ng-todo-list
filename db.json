@@ -1,19 +1,28 @@
 {
-    "tarefas": [
-      {
-        "id": 1,
-        "titulo": "Fazer café",
-        "descricao": "Fazer um café bem quentinho"
-      },
-      {
-        "id": 2,
-        "titulo": "Jogar bola",
-        "descricao": "A seleção vai entrar em campo"
-      },
-      {
-        "id": 3,
-        "titulo": "Estudar programação",
-        "descricao": "Estudar Angular e Java Script"
-      }
-    ]
-  }
+  "tarefas": [
+    {
+      "titulo": "Estudar programação",
+      "descricao": "Estudar Angular e Java Script",
+      "done": true,
+      "id": 3
+    },
+    {
+      "titulo": "Tomar café",
+      "descricao": "com ovo e banana",
+      "done": false,
+      "id": 8
+    },
+    {
+      "titulo": "Estudar angular 9 com Laravel",
+      "descricao": "procurar materiais no medium",
+      "done": true,
+      "id": 9
+    },
+    {
+      "titulo": "fadadsdaaassdas",
+      "descricao": "dadsfaffafsa",
+      "done": true,
+      "id": 10
+    }
+  ]
+}

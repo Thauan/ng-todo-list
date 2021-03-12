@@ -20,8 +20,13 @@
     "@angular/platform-browser": "^6.1.0",
     "@angular/platform-browser-dynamic": "^6.1.0",
     "@angular/router": "^6.1.0",
+    "@fortawesome/angular-fontawesome": "^0.8.2",
+    "@fortawesome/fontawesome-svg-core": "^1.2.34",
+    "@fortawesome/free-solid-svg-icons": "^5.15.2",
+    "@nativescript/schematics": "^11.0.0",
     "bootstrap": "^4.6.0",
     "core-js": "^2.5.4",
+    "html-entities": "^2.1.0",
     "json-server": "^0.16.3",
     "rxjs": "6.0.0",
     "zone.js": "~0.8.26"

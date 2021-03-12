@@ -1,14 +1,67 @@
-.task{
-    padding: 10px;
+.task {
+  padding: 10px;
 
-    .title{
-        float: left;
-        width: 90px;
-    }
-    .remove{
-        padding-left: 95px;
-    }
+  .title {
+    float: left;
+    width: 90px;
+  }
+  .remove {
+    padding-left: 95px;
+  }
 }
 .card {
-    margin: 10px;
+  min-height: 50vh;
+  min-width: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 1em;
+  background: #fff;
+  overflow: hidden;
+  box-shadow: 0 20px 20px rgba(25, 25, 25, 0.25);
+}
+
+.card-container {
+  display: flex;
+  justify-content: center;
+}
+
+.input-grey {
+  background-color: #d5d4d4;
+  color: black;
+  // width: 70%;
+}
+
+.full {
+  width: 100%;
+}
+
+.justify-center {
+  display: flex;
+  justify-content: center;
+}
+
+.todo-checkbox {
+  -ms-transform: scale(2); /* IE */
+  -moz-transform: scale(2); /* FF */
+  -webkit-transform: scale(2); /* Safari and Chrome */
+  -o-transform: scale(2); /* Opera */
+  transform: scale(2);
+  margin-top: 10px;
+}
+
+.underline-task {
+  text-decoration: line-through !important;
+}
+
+.center-checkbox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-copyright {
+  color: grey;
 }

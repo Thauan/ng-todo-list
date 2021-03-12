@@ -1,4 +1,6 @@
 export class Task {
-    public title: string;
-    public description: string;
+    public id: number;
+    public titulo: string;
+    public descricao: string;
+    public done: boolean;
 }

@@ -28,14 +28,14 @@ export class TaskService {
       .pipe(map((response) => response.map((data) => data)));
   }
 
-  // deleta um carro
+  // deleta uma task
   deleteTask(task: Task) {
     return this.httpClient
       .delete<Task>(this.url + "/" + task.id, this.httpOptions)
       .pipe(retry(1), catchError(this.handleError));
   }
 
-  // salva um carro
+  // salva uma task
   saveTask(task: Task): Observable<Task> {
     return this.httpClient.post<Task>(this.url, JSON.stringify(task), this.httpOptions)
       .pipe(
@@ -44,7 +44,7 @@ export class TaskService {
       )
   }
 
-  // utualiza um carro
+  // atualiza uma task
   updateTask(task: Task): Observable<Task> {
     return this.httpClient.put<Task>(this.url + '/' + task.id, JSON.stringify(task), this.httpOptions)
       .pipe(
@@ -53,7 +53,7 @@ export class TaskService {
       )
   }
 
-    // utualiza um carro
+    // atualiza o estado de feito/ou não da task
     updateDoneTask(task: Task): Observable<Task> {
       return this.httpClient.put<Task>(this.url + '/' + task.id, JSON.stringify({ titulo: task.titulo, descricao: task.descricao, done: !task.done}), this.httpOptions)
         .pipe(

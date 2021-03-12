@@ -1,4 +1,4 @@
-<img src="https://imgur.com/a/zL3fZnC" width="100%"/>
+<img src="https://i.imgur.com/R9j0XsY.png" width="100%"/>
 
 # Simple to do list in Angular
 

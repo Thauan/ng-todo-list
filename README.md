@@ -1,5 +1,4 @@
-<img src="https://raw.githubusercontent.com/Thauan/ioasys-frontend/main/print1.png" width="100%"/>
-<img src="https://raw.githubusercontent.com/Thauan/ioasys-frontend/main/print2.png" width="100%"/>
+<img src="https://github.com/Thauan/ng-todo-list/blob/main/src/assets/print.png" width="100%"/>
 
 # Simple to do list in Angular
 

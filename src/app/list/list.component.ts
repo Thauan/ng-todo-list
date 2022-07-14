@@ -35,8 +35,6 @@ export class ListComponent implements OnInit {
       });
   }
 
-
-
   doneTask(task) {
     this.taskService.updateDoneTask(task).subscribe(() => {
       this.getTasks();
@@ -63,7 +61,6 @@ export class ListComponent implements OnInit {
     this.updateTask(task, task);
   }
 
-  // deleta uma task
   removeTask(task: Task) {
     this.taskService.deleteTask(task).subscribe(() => {
       this.getTasks();
@@ -75,8 +72,7 @@ export class ListComponent implements OnInit {
     this.task.descricao = '';
     this.task.done = false;
     this.task.titulo = '';
-    // form.resetForm();
-    // this.taskForm.resetForm(form);
+
     this.task = {} as Task;
   }
 }

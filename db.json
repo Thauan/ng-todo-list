@@ -1,7 +1,7 @@
 {
   "tarefas": [
     {
-      "titulo": "Estudar programação",
+      "titulo": "Estudar programação etes\n",
       "descricao": "Estudar Angular e Java Script",
       "done": true,
       "id": 3
@@ -9,7 +9,7 @@
     {
       "titulo": "Tomar café",
       "descricao": "com ovo e banana",
-      "done": false,
+      "done": true,
       "id": 8
     },
     {
@@ -17,12 +17,6 @@
       "descricao": "procurar materiais no medium",
       "done": true,
       "id": 9
-    },
-    {
-      "titulo": "fadadsdaaassdas",
-      "descricao": "dadsfaffafsa",
-      "done": true,
-      "id": 10
     }
   ]
 }
